@@ -1,0 +1,46 @@
+{
+	"license": "ISC",
+	"author": "cartory",
+	"name": "user-ganamovil",
+	"version": "1.0.0",
+	"description": "user ganamovil",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "ts-node index.ts",
+		"dev": "nodemon index.ts"
+	},
+	"dependencies": {
+		"@decorators/express": "^2.6.0",
+		"cors": "^2.8.5",
+		"dotenv": "^16.0.0",
+		"express": "^4.17.3",
+		"mysql2": "^2.3.3",
+		"oracledb": "^5.3.0"
+	},
+	"devDependencies": {
+		"@types/cors": "^2.8.12",
+		"@types/dotenv": "^8.2.0",
+		"@types/express": "^4.17.13",
+		"@types/morgan": "^1.9.3",
+		"@types/node": "^17.0.25",
+		"@types/oracledb": "^5.2.3",
+		"morgan": "^1.10.0",
+		"nodemon": "^2.0.15"
+	},
+	"nodemonConfig": {
+		"delay": 1000,
+		"verbose": false,
+		"ignore": [
+			".git",
+			"dist",
+			"node_modules"
+		],
+		"watch": [
+			"lib",
+			"src",
+			".env",
+			"tsconfig.json"
+		]
+	}
+}

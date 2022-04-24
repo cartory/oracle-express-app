@@ -1,0 +1,16 @@
+{
+	"compilerOptions": {
+		"jsx": "react",
+		"target": "es2015",
+		"module": "commonjs",
+		"moduleResolution": "node",
+		"esModuleInterop": true,
+		"resolveJsonModule": true,
+		"experimentalDecorators": true,
+		"baseUrl": ".",
+		"paths": {
+			"assets": ["assets/*"],
+			"lib": ["lib/utils/*", "lib/models/*", "lib/scripts/*"]
+		}
+	}
+}
