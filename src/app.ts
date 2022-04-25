@@ -1,4 +1,5 @@
 import cors from "cors"
+import morgan from 'morgan'
 import express from "express"
 import { config } from "dotenv"
 
@@ -18,6 +19,7 @@ const app = express()
 app
 	//
 	.use(cors())
+	.use(morgan('dev'))
 	.use(express.urlencoded({ extended: true }))
 	.use(express.json())
 	//
