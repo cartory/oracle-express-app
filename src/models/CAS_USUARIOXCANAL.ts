@@ -1,0 +1,24 @@
+export interface CAS_USUARIOXCANAL {
+	TZ_LOCK?: number
+	COD_USUARIOXCANAL?: number
+	INTENTOS_FALLIDOS?: number
+
+	CANAL?: string
+	ESTADO?: string
+	MODELO?: string
+	TELEFONO?: string
+	NROSESION?: string
+    CODUSUARIO?: string
+	HORA_ULTEVENTO?: string
+	HORA_ULTCONEXION?: string
+	USUARIO_CREACION?: string
+	SISTEMA_OPERATIVO?: string
+	USUARIO__MODIFICACION?: string
+	IDENTIFICADORDISPOSITIVO?: string
+
+	FECHA_ALTA?: Date
+	FECHA_CREACION?: Date
+	FECHA_ULTEVENTO?: Date
+	FECHA_ULTCONEXION?: Date
+	FECHA_MODIFICACION?: Date
+}
