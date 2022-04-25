@@ -48,7 +48,6 @@ export class OraDBConnection {
 		try {
 			pool = oracledb.getPool(poolAlias)
 		} catch (err) {
-			console.error(err)
 			pool = await oracledb.createPool(this.poolAttributes)
 		}
 
@@ -56,7 +55,7 @@ export class OraDBConnection {
 	}
 
 	public async query<T>(oraExecuteOptions: OraExecuteOptions<T>) {
-		const { sql, bindParams } = oraExecuteOptions
+		const { sql, bindParams = [] } = oraExecuteOptions
 
 		try {
 			const connection = await this.getConnection()
@@ -75,6 +74,7 @@ export class OraDBConnection {
 	public async querySelect<T>(sql: string, bindParams?: oracledb.BindParameters) {
 		return await this.query<T>({
 			sql: sql,
+			resultSet: true,
 			bindParams: bindParams,
 			outFormat: oracledb.OUT_FORMAT_OBJECT,
 			resultCallback: (result) => result.resultSet.getRows(),
